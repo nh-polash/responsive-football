@@ -208,3 +208,62 @@ a.btn:hover .fa-arrow-right {
     font-weight: 300;
 }
 /* footer section css end here */
+
+
+
+/* Responsive css start here */
+
+/* Mobile Device */
+
+@media only screen and (max-width : 688px) {
+    .container-fluid {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+    }
+    
+    .top-banner, .players, .highlights {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr );
+        grid-row-gap: 35px;
+        justify-items: center;
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .banner-image img {
+        width: 310px;
+    }
+
+    /* top banner css end here */
+
+    .players {
+        margin-top: 47px;
+    }
+
+    /* players css end here */
+
+    .highlights-info, .highlights-thumbnail {
+        margin: 15px;
+    }
+
+    .highlights-info h2 {
+        font-size: 30px;
+        line-height: 40px;
+    }
+    
+    .highlights-info p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+
+    footer {
+        display: none;
+    }
+}
