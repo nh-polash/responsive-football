@@ -202,6 +202,10 @@ a.btn:hover .fa-arrow-right {
     transform: rotate(360deg);
 }
 
+.copyright-text {
+    margin-bottom: 40px;
+}
+
 .copyright-text p {
     color: #000;
     font-size: 16px;
@@ -249,7 +253,7 @@ a.btn:hover .fa-arrow-right {
     /* players css end here */
 
     .highlights-info, .highlights-thumbnail {
-        margin: 15px;
+        width: 330px;
     }
 
     .highlights-info h2 {
@@ -262,8 +266,9 @@ a.btn:hover .fa-arrow-right {
         line-height: 24px;
     }
 
+    /* highlights area css end here */
 
-    footer {
-        display: none;
+    .footer-area {
+        width: 300px;
     }
 }
