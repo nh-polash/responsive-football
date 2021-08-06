@@ -53,7 +53,22 @@ a.btn:hover .fa-arrow-right {
     width: 100%;
 }
 
+h2.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #2D25A0;
+    text-transform: uppercase;
+    position: relative;
+}
 
+h2.section-title::before {
+    content: "";
+    position: absolute;
+    width: 78px;
+    height: 5px;
+    background: #2D25A0;
+    bottom: 0;
+}
 
 /* pulse hover animation */
 
@@ -103,10 +118,11 @@ a.btn:hover .fa-arrow-right {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 27px;
+    margin-top: 70px;
 }
 
 .player {
-    width: 330px;
+    width: 100%;
     height: 480px;
     background: #fff;
     box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
@@ -173,6 +189,72 @@ a.btn:hover .fa-arrow-right {
 /* highlights section css end here */
 
 
+/* blogs section css start here */
+.blogs-area {
+    margin-top: 70px;
+}
+
+.blogs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 27px;
+}
+
+.blog {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.blog a {
+    text-decoration: none;
+}
+
+.blog p, .blog span {
+    color: #707070;
+    font-size: 16px;
+    font-weight: 300;
+    margin: 9px 0;
+}
+
+.blog h3 {
+    color: #000;
+    font-size: 19px;
+    margin-top: 20px;
+}
+
+/* blogs section css end here */
+
+
+/* teams section css start here */
+.teams-area {
+    margin: 50px 0 100px;
+}
+
+.teams {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 27px;
+}
+
+.team {
+    width: 100%;
+    height: auto;
+    background: #fff;
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+/* teams section css end here */
+
+
 /* footer section css end here */
 .footer-area {
     Width: 485px;
@@ -219,7 +301,7 @@ a.btn:hover .fa-arrow-right {
 
 /* Mobile Device */
 
-@media only screen and (max-width : 688px) {
+@media only screen and (max-width : 576px) {
     .container-fluid {
         width: 100%;
     }
@@ -228,32 +310,31 @@ a.btn:hover .fa-arrow-right {
         width: 100%;
     }
     
-    .top-banner, .players, .highlights {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr );
+    .top-banner, .players, .highlights, .blogs {
+        grid-template-columns: repeat(1, 1fr);
         grid-row-gap: 35px;
         justify-items: center;
     }
 
     .banner-content h1 {
-        font-size: 36px;
+        font-size: 40px;
         line-height: 50px;
     }
 
     .banner-image img {
-        width: 310px;
+        width: 300px;
     }
-
-    /* top banner css end here */
 
     .players {
         margin-top: 47px;
     }
 
-    /* players css end here */
+    .player, .blogs{
+        width: 300px;
+    }
 
     .highlights-info, .highlights-thumbnail {
-        width: 330px;
+        width: 300px;
     }
 
     .highlights-info h2 {
@@ -266,9 +347,90 @@ a.btn:hover .fa-arrow-right {
         line-height: 24px;
     }
 
-    /* highlights area css end here */
+    .teams {
+        grid-template-columns: repeat(2, 1fr);
+    }
 
     .footer-area {
         width: 300px;
     }
 }
+
+/* tablets devices */
+
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .container-fluid, .container {
+        width: 100%;
+    }
+
+    .top-banner, .players, .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .highlights-info h2 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .highlights-info p {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+/* tablets devices */
+
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    .container-fluid, .container {
+        width: 100%;
+    }
+
+    .top-banner, .highlights {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .banner-content h1 {
+        font-size: 36px;
+        line-height: 50px;
+    }
+
+    .player {
+        width: 100%;
+    }
+
+    .player-info h3 {
+        font-size: 22px;
+    }
+
+    .player-info p {
+        font-size: 14px;
+    }
+
+    .highlights-info h2 {
+        font-size: 30px;
+        line-height: 42px;
+    }
+
+    .highlights-info p {
+        font-size: 10px;
+        line-height: 20px;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1100px) {
+    .container-fluid, .container {
+        width: 100%;
+    }
+}
+
+
